@@ -84,7 +84,7 @@ public class TC_01 extends Base{
 		sp.selectDropdown(sp.sortBy);		
 		
 		captureScreen("doctorDetials");
-		doctorDetialsString=sp.getString(sp.doctorDetials);
+		doctorDetialsString=sp.getString(sp.doctorDetails);
 		int listCount=1;
 		for(String s:doctorDetialsString) {
 			String[] data=convert_String_to_Array(s);
