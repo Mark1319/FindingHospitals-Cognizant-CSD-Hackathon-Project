@@ -27,7 +27,8 @@ public	WebElement experienceDropdownClick;
 public	WebElement allFiltersClick;
 	
 	//locating dropDown sortBy
-	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[1]/div/div[6]/div/div/div/span")
+	//@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[1]/div/div[6]/div/div/div/span")
+	@FindBy(xpath="//*[@data-qa-id='sort_by_selected']")
 public 	WebElement sortByClick;
 
 	//location dropDownList patientStories
@@ -40,25 +41,32 @@ public	List<WebElement> experience;
     
 	//locating dropDownList Fees
 	
-	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[2]/div/div[1]/div/label[1]/span/span")
-public	List<WebElement> feeDropdown;
+//	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[2]/div/div[1]/div/label[1]/span/span")
+//public	List<WebElement> feeDropdown;
 	
+	@FindBy(xpath="//*[@data-qa-id='Fees_radio']")
+			public List<WebElement> feeDropdown;
 	//locating dropDownList availability
-	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[2]/div/div[2]/div/label/span")
-public	List<WebElement> availability;
-	
+	//@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[2]/div/div[2]/div/label/span")
+//public	List<WebElement> availability;
+	@FindBy(xpath="//*[@data-qa-id='Availability_radio']")
+	public List<WebElement>availability;
 	
 	//locating dropDownList sortBy
-	@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[1]/div/div[6]/div/div/div/ul/li")
+	//@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[1]/div/div[6]/div/div/div/ul/li")
+	//@FindBy(xpath="//*[@id=\"container\"]/div/div[3]/div/div/header/div[1]/div/div[5]/div/div/div/ul/li")
+	@FindBy(xpath="//*[@class='c-dropdown__list__item'][@tabindex='0']")
 public	List<WebElement> sortBy;
+	
 	
 	//locating doctorDetials
 	@FindBy(xpath="//*[@class=\"info-section\"]")
-public	List<WebElement> doctorDetials;
+public	List<WebElement> doctorDetails;
 	
 	//locating forCoperate icon
 	@FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div[1]/div[2]/div/div[3]/div[1]/span/span[2]")
 public	WebElement forCorporatesIcon;
+	              
 	
 	//locating health and wellness plan
 	@FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div[1]/div[2]/div/div[3]/div[1]/span/div/div[1]/a")
@@ -98,7 +106,7 @@ public	WebElement healthandWellness;
 	
 	public void printDetials() {
 		for(int i=0;i<5;i++) {
-			System.out.println(doctorDetials.get(i).getText());
+			System.out.println(doctorDetails.get(i).getText());
 		}
 	}
 	

@@ -29,7 +29,7 @@ public class HomePage extends BasePage{
 	@FindBy(xpath="//*[@id=\"c-omni-container\"]/div/div[2]/div[2]/div[1]/div[1]")
 	WebElement dentist;
 	
-	//locting suggestion
+	//locating suggestion
 	@FindBy(xpath="//*[@id=\"c-omni-container\"]/div/div[1]/div[2]/div[2]/div[1]")
 	WebElement location;
 	
